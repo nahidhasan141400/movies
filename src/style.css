@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Overpass&display=swap");
+
+:root {
+  --oreng: rgb(239, 51, 33);
+  --goreng: radial-gradient(
+    circle,
+    rgba(184, 108, 61, 1) 0%,
+    rgba(239, 51, 33, 1) 100%
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  outline: none;
+}
+body {
+  background: var(--goreng);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  padding: 1px 5px;
+}
+
+nav img {
+  width: 100px;
+}
+nav input {
+  background: transparent;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.152),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.446);
+  height: 30px;
+  width: 210px;
+  margin-left: 10px;
+  color: rgb(61, 61, 61);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 1px 9px;
+  border-radius: 20px;
+}
+.gap {
+  height: 50px;
+}
+.download-app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.download-app a {
+  text-decoration: none;
+  font-size-adjust: 18px;
+  color: aqua;
+  background: rgba(247, 97, 52, 0.501);
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.block {
+  height: 190px;
+  width: 320px;
+  position: relative;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+}
+
+.block img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 320px;
+  height: 190px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.659);
+}
+
+.block h1 {
+  color: var(--oreng);
+  font-size: 21px;
+  font-weight: bolder;
+  text-shadow: 0 0 3px black, 0 0 5px white;
+}
+
+.block h2 {
+  color: rgb(0, 255, 255);
+  text-shadow: 0 0 3px black, 0 0 5px white;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.block a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  background: var(--oreng);
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 40px;
+  border: 2px solid aqua;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.block a:hover {
+  color: var(--oreng);
+  background: white;
+}
