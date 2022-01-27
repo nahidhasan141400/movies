@@ -8,6 +8,10 @@
     rgba(239, 51, 33, 1) 100%
   );
 }
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
 
 * {
   padding: 0;
@@ -64,6 +68,15 @@ nav input {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 4px black;
+}
+
+.box {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column-reverse;
 }
 
 .content {
@@ -126,8 +139,81 @@ nav input {
   border: 2px solid aqua;
   margin-top: 10px;
   transition: all 0.5s ease-in-out;
+  animation: hu 5s infinite;
 }
 .block a:hover {
   color: var(--oreng);
   background: white;
+}
+
+.verti {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  margin: 15px 0;
+  padding: 5px;
+}
+
+.verti .block {
+  position: relative;
+  margin-right: 200px;
+  width: 360px;
+  color: aqua;
+}
+.verti .block h1 {
+  font-size: 16px;
+}
+
+.verti::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
+  width: 0px;
+}
+
+.verti::-webkit-scrollbar-thumb {
+  background: radial-gradient(
+    circle,
+    rgb(64, 255, 0) 0%,
+    rgba(239, 50, 33, 0) 100%
+  );
+  border-radius: 10px;
+  transition: all 0.5s;
+  filter: hue-rotate(100deg);
+  animation: hu 1s infinite;
+}
+.verti::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+    circle,
+    rgb(0, 255, 157) 0%,
+    rgba(33, 191, 239, 0.131) 100%
+  );
+  border-radius: 50px;
+}
+
+@keyframes hu {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media (min-width: 650px) {
+  nav {
+    padding: 2px 10px;
+  }
+  nav img {
+    width: 150px;
+  }
+  nav input {
+    width: 300px;
+    height: 40px;
+    margin-left: 30px;
+  }
+  .box {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .box;
 }

@@ -7,12 +7,20 @@ async function  data(){
     return data;
 };
 
- let str = async ()=>{
+
+
+ let strNew = async (sour , num)=>{
     let da = await data();
     // console.log(da[0]);
-
-    for (let i = 0; i < da.length; i++) {
-        ro.innerHTML += `<div class="block">
+    let n ;
+    
+    if( da.length > num ){
+      n = da.length - num;
+    }else{
+      n = 0;
+    }
+    for ( let i = da.length - 1 ; i > n; i--) {
+        sour.innerHTML += `<div class="block">
         <h1>${da[i].name}</h1>
         <h2>${da[i].size}</h2>
         <a href="${da[i].link}"
@@ -25,7 +33,30 @@ async function  data(){
 
 }
 
-str()
+ let str = async (sour , num)=>{
+    let da = await data();
+    // console.log(da[0]);
+    let n ;
+    if( da.length > num ){
+      n = num;
+    }else{
+      n = da.length
+    }
+    for (let i = 0; i < n; i++) {
+        sour.innerHTML += `<div class="block">
+        <h1>${da[i].name}</h1>
+        <h2>${da[i].size}</h2>
+        <a href="${da[i].link}"
+          >download</a
+        >
+        <img src="${da[i].img}" alt="" />
+      </div>`
+        
+    }
+
+}
+
+str(ro ,10)
 
 let search = document.querySelector('#search');
 
@@ -46,7 +77,7 @@ async function qury_movie (value){
     }
     else{
       console.log(`not macth ${v} , with ${key}`)
-      console.log(key);
+      // console.log(key);
     }
 
     
@@ -78,9 +109,15 @@ async function qury_movie (value){
 search.addEventListener('keyup', 
         async ()=>{
           let data3 = await qury_movie(search.value);
-          ro.innerHTML=''
+          ro.innerHTML='';
+          let n ;
+          if( data3.length > 10 ){
+            n = 10;
+          }else{
+            n = data3.length
+          }
           
-          for (let i = 0; i < data3.length; i++) {
+          for (let i = 0; i < n; i++) {
             ro.innerHTML += `<div class="block">
             <h1>${data3[i].name}</h1>
             <h2>${data3[i].size}</h2>
@@ -92,5 +129,8 @@ search.addEventListener('keyup',
             
         }
       })
+
+      let verti = document.querySelector('.verti');
+      strNew(verti , 9)
 
 
