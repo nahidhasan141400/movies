@@ -24,6 +24,20 @@ body {
   background: var(--goreng);
 }
 
+iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  background: var(--goreng);
+  box-shadow: 0 7px 15px rgb(96, 255, 255);
+  position: fixed;
+  z-index: 4;
+}
+#gap {
+  width: 100%;
+  height: 270px;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -99,7 +113,7 @@ nav input {
   margin: 10px;
 }
 
-.block img {
+.block #thumb {
   position: absolute;
   top: 0;
   left: 0;
@@ -124,7 +138,7 @@ nav input {
   margin-top: 10px;
 }
 
-.block a {
+#down {
   text-decoration: none;
   color: white;
   padding: 5px 10px;
@@ -141,9 +155,23 @@ nav input {
   transition: all 0.5s ease-in-out;
   animation: hu 5s infinite;
 }
-.block a:hover {
+#down:hover {
   color: var(--oreng);
   background: white;
+}
+
+#play {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: red;
+  top: -25px;
+  right: -140px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .verti {
@@ -157,7 +185,8 @@ nav input {
 .verti .block {
   position: relative;
   margin-right: 200px;
-  width: 360px;
+  align-items: center;
+  width: 302px;
   color: aqua;
 }
 .verti .block h1 {
@@ -200,6 +229,14 @@ nav input {
 }
 
 @media (min-width: 650px) {
+  iframe {
+    height: 80vh;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+  #gap {
+    height: 0px;
+  }
   nav {
     padding: 2px 10px;
   }

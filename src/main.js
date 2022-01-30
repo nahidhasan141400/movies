@@ -23,10 +23,8 @@ async function  data(){
         sour.innerHTML += `<div class="block">
         <h1>${da[i].name}</h1>
         <h2>${da[i].size}</h2>
-        <a href="${da[i].link}"
-          >download</a
-        >
-        <img src="${da[i].img}" alt="" />
+        ${da[i].paly ? ` <button id='play' onclick="play('${da[i].link}')"><img src="src/img/play.png" alt=""></button>` : ` <a id='down' href="${da[i].link}">Download</a>`}
+        <img id='thumb' src="${da[i].img}" alt="" />
       </div>`
         
     }
@@ -46,17 +44,15 @@ async function  data(){
         sour.innerHTML += `<div class="block">
         <h1>${da[i].name}</h1>
         <h2>${da[i].size}</h2>
-        <a href="${da[i].link}"
-          >download</a
-        >
-        <img src="${da[i].img}" alt="" />
+        ${da[i].paly ? ` <button id='play' onclick="play('${da[i].link}')"><img src="src/img/play.png" alt=""></button>` : ` <a id='down' href="${da[i].link}">Download</a>`}
+        <img id='thumb' src="${da[i].img}" alt="" />
       </div>`
         
     }
 
 }
 
-str(ro ,10)
+str(ro ,30)
 
 let search = document.querySelector('#search');
 
@@ -121,10 +117,8 @@ search.addEventListener('keyup',
             ro.innerHTML += `<div class="block">
             <h1>${data3[i].name}</h1>
             <h2>${data3[i].size}</h2>
-            <a href="${data3[i].link}"
-              >download</a
-            >
-            <img src="${data3[i].img}" alt="" />
+            ${data3[i].paly ? ` <button id='play' onclick="play('${data3[i].link}')"><img src="src/img/play.png" alt=""></button>` : ` <a id='down' href="${data3[i].link}">Download</a>`}
+            <img id='thumb' src="${data3[i].img}" alt="" />
           </div>`
             
         }
@@ -134,3 +128,17 @@ search.addEventListener('keyup',
       strNew(verti , 9)
 
 
+      let body = document.querySelector('body');
+
+
+function play (link){
+
+
+  body.innerHTML=` <iframe id="player"
+  src="${link}"
+  allow="autoplay"
+  allowfullscreen
+></iframe><div id='gap'></div><div id="ro2" class="box"></div><script src="src/view.js"></script>`
+let ro2 = document.querySelector('#ro2')
+strNew(ro2 ,6)
+}
