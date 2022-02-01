@@ -134,7 +134,7 @@ search.addEventListener('keyup',
 function play (link){
 
 
-  body.innerHTML=` <iframe id="player"
+  body.innerHTML=` <div id='blo'></div><iframe id="player"
   src="${link}"
   allow="autoplay"
   allowfullscreen

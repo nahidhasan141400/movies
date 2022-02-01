@@ -227,12 +227,23 @@ nav input {
     filter: hue-rotate(360deg);
   }
 }
-
+#blo {
+  height: 150px;
+  width: 170px;
+  background: transparent;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+}
 @media (min-width: 650px) {
   iframe {
     height: 80vh;
     position: relative;
     margin: 0 0 20px 0;
+  }
+  #blo {
+    position: absolute;
   }
   #gap {
     height: 0px;
