@@ -1,7 +1,8 @@
 [
     {
       "name": "Student Of The Year 2 (hn)",
-      "tag": "Student Of The Year 2 2019 Indian Movie",
+      "language": "hindi",
+      "tag": "Student Of The Year hindi 2 2019 Indian Movie",
       "size": "1.1 GB",
       "paly": false,
       "img": "movie/soy.jpg",
@@ -9,7 +10,8 @@
     },
     {
       "name": "Dora And The Lost City Of Gold 2019 (eng)",
-      "tag": "English Movie Dora And The Lost City Of Gold 2019 adventure",
+      "language": "english",
+      "tag": "English Movie Dora And english The Lost City Of Gold 2019 adventure",
       "size": "804.49 MB",
       "paly": false,
       "img": "movie/dora.jpg",
@@ -17,7 +19,8 @@
     },
     {
       "name": "The Matrix Resurrections 2021 (eng)",
-      "tag": "The Matrix Resurrections 2021",
+      "language": "english",
+      "tag": "The Matrix english Resurrections 2021",
       "size": "706 MB",
       "paly": false,
       "img": "movie/matrix.png",
@@ -25,7 +28,8 @@
     },
     {
       "name": "How to Train Your Dragon 3  (eng)",
-      "tag": "How to Train Your Dragon 3 2019 English Movie Animation, Action, Adventure, Adventure, Fantasy",
+      "language": "english",
+      "tag": "How to Train english Your Dragon 3 2019 English Movie Animation, Action, Adventure, Adventure, Fantasy",
       "size": "3.5 GB",
       "paly": false,
       "img": "movie/How-to-Train-Your-Dragon.jpg",
@@ -33,7 +37,8 @@
     },
     {
       "name": "Fast & Furious: Hobbs & Shaw  (hindi)",
-      "tag": "Fast & Furious Presents: Hobbs & Shaw 2019 English Movie Action, Adventure",
+      "language": "hindi",
+      "tag": "Fast & Furious hindi Presents: Hobbs & Shaw 2019 English Movie Action, Adventure",
       "size": "1.33 GB",
       "paly": false,
       "img": "movie/Hobbs-Shaw.jpg",
@@ -41,7 +46,8 @@
     },
     {
       "name": "Maleficent (Hindi)",
-      "tag": "Maleficent Hindi Dubbed 2019 English Movie Action, Family, Adventure, Fantasy",
+      "language": "hindi",
+      "tag": "Maleficent hindi Hindi Dubbed 2019 English Movie Action, Family, Adventure, Fantasy",
       "size": "937.58 MB",
       "paly": false,
       "img": "movie/Maleficent.jpeg",
@@ -49,7 +55,8 @@
     },
     {
       "name": "Kalank (Hindi)",
-      "tag": "Kalank 2019 Indian Movie Drama, Romance romantic",
+      "language": "hindi",
+      "tag": "Kalank 2019 hindi Indian Movie Drama, Romance romantic",
       "size": "1.41 GB",
       "paly": false,
       "img": "movie/kanak.jpg",
@@ -57,7 +64,8 @@
     },
     {
       "name": "Saaho (hindi)",
-      "tag": "Saaho saho new action",
+      "language": "hindi",
+      "tag": "Saaho saho hindi new action",
       "size": "1.4GB",
       "paly": false,
       "img": "movie/saaho.jpg",
@@ -65,7 +73,8 @@
     },
     {
       "name": "Atrangi Re(hindi)",
-      "tag": "Atrangi Re 2021 Indian Movie Drama | Thriller | Comedy | Romance",
+      "language": "hindi",
+      "tag": "Atrangi Re 2021 Indian hindi Movie Drama | Thriller | Comedy | Romance",
       "size": "1.6 GB",
       "paly": false,
       "img": "movie/Atrangi.jpg",
@@ -73,7 +82,8 @@
     },
     {
       "name": "Tom and Jerry Cowboy Up!",
-      "tag": "Tom and Jerry Cowboy Up! Tom and Jerry ranch!AnimationComedyFamilyWestern",
+      "language": "carton",
+      "tag": "Tom and Jerry Cowboy Up! carton Tom and Jerry ranch!AnimationComedyFamilyWestern",
       "size": "online",
       "paly": true,
       "img": "movie/tnj.jpg",
@@ -81,6 +91,7 @@
     },
     {
       "name": "Padmapuran (bn)",
+      "language": "bangla",
       "tag": "Padmapuran (bn bangla new bangladesh|",
       "size": "online",
       "paly": true,
@@ -89,6 +100,7 @@
     },
     {
       "name": "Baazi (bn)",
+      "language": "bangla",
       "tag": "Baazi new zit movie bangla drama baroti bangla git jit baji",
       "size": "online",
       "paly": true,
@@ -97,7 +109,8 @@
     },
     {
       "name": "pushpa (hindi)",
-      "tag": "pushpa pos pospa",
+      "language": "hindi",
+      "tag": "pushpa pos hindi pospa",
       "size": "online",
       "paly": true,
       "img": "movie/pushpa.jpg",
@@ -105,10 +118,20 @@
     },
     {
       "name": "spyder man no way home (eng)",
-      "tag": "spyder man no way home new",
+      "language": "english",
+      "tag": "spyder man no english way home new",
       "size": "online",
       "paly": true,
       "img": "movie/spyder man no.png",
       "link":"https://drive.google.com/file/d/10Pywtj4CRVQBDVu1Pp4EIEx8NVKchHA1/preview"
+    },
+    {
+      "name": "spyder man no way home (hindi)",
+      "language": "hindi",
+      "tag": "spyder man no hindi way home new",
+      "size": "online",
+      "paly": true,
+      "img": "movie/spyder man no.png",
+      "link":"https://drive.google.com/file/d/1TZfeH9X3WYMNgMZXB8Q6PZTME4C27pOx/preview"
     }
 ]
