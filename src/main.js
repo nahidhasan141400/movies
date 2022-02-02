@@ -107,8 +107,8 @@ let red =  async (data3 , ti)=>{
   debugger
   ti.innerHTML='';
   let n ;
-  if( data3.length > 10 ){
-    n = 10;
+  if( data3.length > 20 ){
+    n = 20;
   }else{
     n = data3.length
   }
@@ -134,11 +134,10 @@ search.addEventListener('keyup',()=>{
   key(search.value, ro);
 } )
 
-      let verti = document.querySelector('.verti');
-      strNew(verti , 9)
+ let verti = document.querySelector('.verti');
+ strNew(verti , 9)
 
-
-      let body = document.querySelector('body');
+ let body = document.querySelector('body');
 
 
 function play (link, qdata){

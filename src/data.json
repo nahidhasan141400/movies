@@ -21,10 +21,10 @@
       "name": "The Matrix Resurrections 2021 (eng)",
       "language": "english",
       "tag": "The Matrix english Resurrections 2021",
-      "size": "706 MB",
-      "paly": false,
+      "size": "noline",
+      "paly": true,
       "img": "movie/matrix.png",
-      "link":"magnet:?xt=urn:btih:6FE2BF88B02C8ED9FA67BC0DD7ECBFE216AA2844"
+      "link":"https://drive.google.com/file/d/1L31EKEbrN_IDWywEvpm2b6voazW8yS5v/preview"
     },
     {
       "name": "How to Train Your Dragon 3  (eng)",
@@ -45,6 +45,15 @@
       "link":"magnet:?xt=urn:btih:7788a003dde9a705446bbaf6251a0bac220c8556"
     },
     {
+      "name": "Guardians of the Galaxy Vol. 2 (hindi)",
+      "language": "hindi",
+      "tag": "Guardians of the Galaxy Vol. 2 hindi Movie Action, Adventure",
+      "size": "online",
+      "paly": true,
+      "img": "movie/gotg.jpg",
+      "link":"https://drive.google.com/file/d/16wmRVNJJ1EHaZuArNv49wWTLnuNOk6AJ/preview"
+    },
+    {
       "name": "Maleficent (Hindi)",
       "language": "hindi",
       "tag": "Maleficent hindi Hindi Dubbed 2019 English Movie Action, Family, Adventure, Fantasy",
@@ -61,6 +70,15 @@
       "paly": false,
       "img": "movie/kanak.jpg",
       "link":"magnet:?xt=urn:btih:bffee73b35d0d3c157f4e5a23e8c31c89531c842"
+    },
+    {
+      "name": "Bruce Lee:The Fighter(Hindi)",
+      "language": "hindi",
+      "tag": "Bruce Lee: The Fighter hindi Indian Movie Drama, Romance romantic",
+      "size": "1.41 GB",
+      "paly": true,
+      "img": "movie/brotf.jpg",
+      "link":"https://drive.google.com/file/d/15HS-eBKzG-lDFXH0h9O84u4-BGZhW75v/preview"
     },
     {
       "name": "Saaho (hindi)",
