@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 300px;
+        overflow-x: scroll;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="flavoursContainer">
+      This is a really long sentence to demo my code, it's just going on and on.
+      Still going. I should have used some default placeholder text but I've
+      started now so I'll keep going.
+    </div>
+    <script>
+      const flavoursContainer = document.getElementById("flavoursContainer");
+      const flavoursScrollWidth = flavoursContainer.scrollWidth;
+
+      window.addEventListener("load", () => {
+        let i = 0;
+        setInterval(() => {
+          flavoursContainer.scrollTo(i, 0);
+          i++;
+        }, 10);
+      });
+    </script>
+  </body>
+</html>

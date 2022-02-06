@@ -138,6 +138,39 @@ search.addEventListener('keyup',dib(()=>{
  strNew(verti , 9)
 
  let body = document.querySelector('body');
+//  aoto scroll
+// let stid;
+// window.scrollbars.addEventListener("click",()=>{
+//   console.log('ok');
+// })
+
+      const flavoursScrollWidth = verti.scrollWidth / 2  ;
+
+     function autoScroll(i){
+      
+      console.log(flavoursScrollWidth);
+      if(i < flavoursScrollWidth + 200){
+        stid = setTimeout(() => {
+        verti.scrollTo(i, 0);
+            i+= 5;
+            autoScroll(i)
+            
+           }, 1);
+
+
+      }else{
+        return
+      }
+          
+          
+     }
+
+
+      window.addEventListener("load", ()=>{
+        let i = 0;
+        autoScroll(i)
+        console.log(window.scrollbars);
+      })
 
 
 function play (link, qdata){
