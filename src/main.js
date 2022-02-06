@@ -1,6 +1,9 @@
 // nahid hasan sagar
 let ro = document.querySelector('#ro');
+let loadmore = document.querySelector('#loadmore');
 
+let from = 4;
+let to = 8;
 async function  data(){
     var res = await fetch("src/data.json");
     var data = await res.json();
@@ -52,7 +55,7 @@ async function  data(){
 
 }
 
-str(ro ,30)
+str(ro ,to);
 
 let search = document.querySelector('#search');
 
@@ -84,27 +87,24 @@ async function qury_movie (value){
 }
 
 
-// async function debunce (fn , dellay){
-//   let timeoutid;
-//   async function nashi(){
-//     if(timeout){
-//       clearTimeout(timeoutid);
-//       console.log(dellay);
-//     }else{
-//       console.log(timeoutid);
-//     }
 
-//     timeoutid = setTimeout(()=>{
-//       fn();
-//       console.log('ok');
-//     }, dellay);
-//   }
-  
-// }
+
+function dib(fn,dl){
+  let set;
+  return function(){
+      if(set){
+          clearTimeout(set)
+      }
+   set = setTimeout(()=>{
+          fn();
+      },dl)
+  }
+}
+
 
 let red =  async (data3 , ti)=>{
   console.log(data3);
-  debugger
+  
   ti.innerHTML='';
   let n ;
   if( data3.length > 20 ){
@@ -130,9 +130,9 @@ async function key (list , it){
   red(data3 , it);
 }
 
-search.addEventListener('keyup',()=>{
+search.addEventListener('keyup',dib(()=>{
   key(search.value, ro);
-} )
+},500) )
 
  let verti = document.querySelector('.verti');
  strNew(verti , 9)
@@ -154,3 +154,70 @@ console.log(qdata);
 key(qdata ,ro2);
  
 };
+
+// infinit scrollprint
+
+ async function scp (div,from,to){
+
+   let da = await data();
+
+   if (to < da.length){
+     
+        for (let i = from; i < to; i++) {
+     
+
+          console.log(`frist`+ i);
+          let n = `<div class="block">
+          <h1>${da[i].name}</h1>
+          <h2>${da[i].size}</h2>
+          ${da[i].paly ? ` <button id='play' onclick="play('${da[i].link}','${da[i].language}')"><img src="src/img/play.png" alt=""></button>` : ` <a id='down' href="${da[i].link}">Download</a>`}
+          <img id='thumb' src="${da[i].img}" alt="" />
+        </div>`
+          
+          div.insertAdjacentHTML('beforeend', n);
+      
+          }
+
+   }else{
+     
+   for (let i = from; i < da.length; i++) {
+     
+     console.log(i);
+    let n = `<div class="block">
+    <h1>${da[i].name}</h1>
+    <h2>${da[i].size}</h2>
+    ${da[i].paly ? ` <button id='play' onclick="play('${da[i].link}','${da[i].language}')"><img src="src/img/play.png" alt=""></button>` : ` <a id='down' href="${da[i].link}">Download</a>`}
+    <img id='thumb' src="${da[i].img}" alt="" />
+  </div>`
+    
+    div.insertAdjacentHTML('beforeend', n);
+ 
+    }
+   }
+   
+
+
+
+
+   
+  }
+
+
+window.addEventListener('scroll', dib(()=>{
+  let {scrollTop, clientHeight, scrollHeight} = document.documentElement;
+  
+if(scrollTop + clientHeight + 60> scrollHeight){
+  from = from + 4;
+  to = to + 4;
+  scp(ro,from,to)}
+},300));
+
+loadmore.addEventListener('click', dib(()=>{
+  alert('o')
+  let {scrollTop, clientHeight, scrollHeight} = document.documentElement;
+  
+if(scrollTop + clientHeight + 10> scrollHeight){
+  from = from + 4;
+  to = to + 4;
+  scp(ro,from,to)}
+},300));

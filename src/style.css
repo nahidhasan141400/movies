@@ -8,6 +8,9 @@
     rgba(239, 51, 33, 1) 100%
   );
 }
+::selection {
+  background: transparent;
+}
 ::-webkit-scrollbar {
   background: transparent;
   width: 0;
@@ -90,7 +93,7 @@ nav input {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .content {
@@ -227,6 +230,24 @@ nav input {
     filter: hue-rotate(360deg);
   }
 }
+#load {
+  width: 100%;
+  text-align: center;
+}
+#loadmore {
+  padding: 5px 10px;
+  border: none;
+  background: cyan;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 2px 2px 4px black;
+}
+#loadmore:active {
+  box-shadow: 5px 5px 4px black;
+}
 #blo {
   height: 150px;
   width: 170px;
@@ -263,5 +284,4 @@ nav input {
     flex-direction: row-reverse;
     flex-wrap: wrap;
   }
-  .box;
 }
